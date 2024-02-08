@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, ScrollView } from "react-native";
+import Chess from "./Chess";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      {/* {Chess()} */}
+      <View style={styles.innerContainer}>{Chess()}</View>
     </View>
   );
 }
@@ -13,8 +14,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "lightgreen",
+    // justifyContent: "center",
+    // alignItems: "center",
+  },
+  innerContainer: {
+    flex: 1,
+    marginVertical: "50%",
+    // paddingHorizontal: 10,
+    // borderRadius: 10,
   },
 });
